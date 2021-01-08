@@ -1,4 +1,8 @@
 import { getSum } from './mathutils.js';
+import { getSubtract } from './mathutils.js';
+import { getMultiply } from './mathutils.js';
+
+
 const add1 = document.getElementById('add-input1');
 const add2 = document.getElementById('add-input2');
 const sumResults = document.getElementById('add-results');
@@ -11,7 +15,6 @@ export function addEventHandler(){
 }
 
 
-import { getSubtract } from './mathutils.js';
 const subtractInput1 = document.getElementById('subtract-input1');
 const subtractInput2 = document.getElementById('subtract-input2');
 const subtractResults = document.getElementById('subtract-results');
@@ -24,14 +27,13 @@ export function subtractEventHandler(){
 }
 
 
-import { getmultiply } from './mathutils.js';
 const multiplyInput1 = document.getElementById('multiply-input1');
 const multiplyInput2 = document.getElementById('multiply-input2');
 const multiplyResults = document.getElementById('multiply-results');
 
 export function multiplyEventHandler(){
-    const subInput1 = multiplyInput1.valueAsNumber;
-    const subInput2 = multiplyInput2.valueAsNumber;
-    const subtract = getMultiply(multiplyInput1,multiplyInput2);
+    const productInput1 = multiplyInput1.valueAsNumber;
+    const productInput2 = multiplyInput2.valueAsNumber;
+    const multiply = getMultiply(productInput1,productInput2);
     multiplyResults.textContent = multiply;
 }
